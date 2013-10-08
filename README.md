@@ -18,12 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In director root_rails/app/presenters create file example_presenter.rb with content
 
-## Contributing
+    class ExamplePresenter < BasePresenter
+      presents :example
+      delegate :name, :example
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+      def name
+        "Name"
+      end
+    end
+
+and in file show.html.erb
+
+    <% present @example do |presenter| %>
+      Name: <%= presenter.name %>
+    <% end %>
