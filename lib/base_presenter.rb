@@ -1,4 +1,5 @@
 require "base_presenter/version"
+require "application_helper"
 
 class BasePresenter
 
