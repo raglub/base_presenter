@@ -1,3 +1,3 @@
-class DummyHelper < ActionController::Base
-  extend ApplicationHelper
+module DummyHelper
+ # extend ApplicationHelper
 end

@@ -1,4 +1,4 @@
-class Dummy
+class DummyModel
   def name
     "example name"
   end

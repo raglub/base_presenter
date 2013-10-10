@@ -27,10 +27,21 @@ In director root_rails/app/presenters create file example_presenter.rb with cont
       def name
         "Name"
       end
+
+      def self.class_name
+        "Example"
+      end
     end
 
-and in file show.html.erb
+and in file show.html.erb with:
+* object @example
 
     <% present @example do |presenter| %>
       Name: <%= presenter.name %>
+    <% end %>
+
+* class Example
+
+    <% present Example do |presenter| %>
+      Class name: <%= presenter.class_name %>
     <% end %>
