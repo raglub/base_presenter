@@ -1,5 +1,6 @@
 require "base_presenter/version"
 require "application_helper"
+
 class BasePresenter
 
   def initialize(object, template)
@@ -8,14 +9,15 @@ class BasePresenter
   end
 
   def method_missing(*args, &block)
-    h.send(*args, &block)
+    @template.send(*args, &block)
   end
 
+  # Return span with 'None given' when value is blank
   def handle_none(value)
     if value.present?
       yield
     else
-      h.content_tag :span, "None given", class: "none"  
+      content_tag :span, "None given", class: "none"
     end
   end
 
@@ -27,15 +29,11 @@ class BasePresenter
         @object
       end
     end
+
+    def method_missing(*args, &block)
+      @@template.send(*args, &block)
+    end
+
   end
 
-  private
-
-    def self.h
-      @@template
-    end
-
-    def h
-      @template
-    end
 end

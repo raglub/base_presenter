@@ -20,28 +20,43 @@ Or install it yourself as:
 
 In director root_rails/app/presenters create file example_presenter.rb with content
 
-    class ExamplePresenter < BasePresenter
-      presents :example
-      delegate :name, :example
+```ruby
+class ExamplePresenter < BasePresenter
+  presents :example
+  delegate :name, :example
 
-      def name
-        "Name"
-      end
+  def name
+    "Name"
+  end
 
-      def self.class_name
-        "Example"
-      end
-    end
+  def self.class_name
+    "Example"
+  end
+end
+```
 
 and in file show.html.erb with:
-* object @example
+* object `@example`
 
-    <% present @example do |presenter| %>
-      Name: <%= presenter.name %>
-    <% end %>
+```erb
+<% present @example do |presenter| %>
+  Name: <%= presenter.name %>
+<% end %>
+```
 
-* class Example
+* class `Example`
 
-    <% present Example do |presenter| %>
-      Class name: <%= presenter.class_name %>
-    <% end %>
+```erb
+<% present Example do |presenter| %>
+  Class name: <%= presenter.class_name %>
+<% end %>
+```
+## Methods
+
+Methods of BasePresenter
+
+Method returns span with 'None given' when value is blank
+```erb
+#handle_none(value)
+```
+
