@@ -6,7 +6,7 @@ require 'base_presenter/version'
 Gem::Specification.new do |spec|
   spec.name          = "base_presenter"
   spec.version       = BasePresenter::VERSION
-  spec.date          = '2013-10-10'
+  spec.date          = '2013-10-11'
   spec.authors       = ["Michał Szyma"]
   spec.email         = ["raglub.ruby@gmail.com"]
   spec.description   = %q{The gem adds "Presenter" functionality into Rails application}

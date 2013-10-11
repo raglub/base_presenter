@@ -23,7 +23,7 @@ In director root_rails/app/presenters create file example_presenter.rb with cont
 ```ruby
 class ExamplePresenter < BasePresenter
   presents :example
-  delegate :name, :example
+  delegate :id, to: :example
 
   def name
     "Name"
@@ -32,6 +32,13 @@ class ExamplePresenter < BasePresenter
   def self.class_name
     "Example"
   end
+
+  def link_to_example
+    handle_none example.name do
+      link_to(example.name, example_path(example))
+    end
+  end
+
 end
 ```
 
@@ -40,7 +47,9 @@ and in file show.html.erb with:
 
 ```erb
 <% present @example do |presenter| %>
+  Id: <%= presenter.id %>
   Name: <%= presenter.name %>
+  Url: <%= presenter.link_to_example %>
 <% end %>
 ```
 

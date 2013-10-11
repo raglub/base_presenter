@@ -12,6 +12,7 @@ module ApplicationHelper
     end
 
     yield presenter if block_given?
+    #block.arity > 0 ? yield(presenter) : presenter.instance_eval(&block)
     return presenter
   end
 end
