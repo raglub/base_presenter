@@ -21,19 +21,19 @@ class BasePresenter
     end
   end
 
-  class << self
-    attr_accessor :template
+  def self.initialize(object, template)
+    @@object = object
+    @@template = template
+  end
 
-    def presents(name)
-      define_method(name) do
-        @object
-      end
+  def self.presents(name)
+    define_method(name) do
+      @object
     end
+  end
 
-    def method_missing(*args, &block)
-      @@template.send(*args, &block)
-    end
-
+  def self.method_missing(*args, &block)
+    @@template.send(*args, &block)
   end
 
 end

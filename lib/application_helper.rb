@@ -5,7 +5,7 @@ module ApplicationHelper
     if object_or_class.methods.include?(:new)
       klass ||= "#{object_or_class}Presenter".constantize
       presenter = klass
-      presenter.template = self
+      presenter.initialize(object_or_class, self)
     else
       klass ||= "#{object_or_class.class}Presenter".constantize
       presenter = klass.new(object_or_class, self)

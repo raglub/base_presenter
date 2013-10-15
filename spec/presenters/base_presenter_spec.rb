@@ -15,14 +15,11 @@ end
 describe ApplicationHelper do
   let(:dummy_model) { DummyModel.new }
 
-  let(:dummy_presenter) do
-    helper.present(dummy_model)
-  end
+  let(:template) { ActionView::Base.new }
+
+  let(:dummy_presenter) { DummyModelPresenter.new(dummy_model, template) }
 
   describe "without block" do
-    it "should initialize presenter" do
-      dummy_presenter
-    end
 
     it "#presents" do
       dummy_presenter.dummy.should eq dummy_model
@@ -44,14 +41,6 @@ describe ApplicationHelper do
     it "#handle_none with not blank of value" do
       value = nil
       dummy_presenter.handle_none(value) {value}.should match('<span class')
-    end
-
-    it ".template" do
-      helper.present(DummyModel).template.should_not be_nil
-    end
-
-    it "should show class name" do
-      helper.present(DummyModel).name.should eq("Class name")
     end
   end
 end
