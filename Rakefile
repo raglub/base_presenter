@@ -1,10 +1,9 @@
 require "bundler/gem_tasks"
 require 'rspec/core/rake_task'
 
-desc 'Default: run specs.'
-task default: :spec
-
-desc "Run specs"
+desc "Run Spec"
 RSpec::Core::RakeTask.new do |t|
-  t.rspec_opts = "--tag fast"
+  t.verbose = false
 end
+
+task default: :spec

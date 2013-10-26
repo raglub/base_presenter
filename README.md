@@ -1,6 +1,6 @@
 # BasePresenter
-
-[![Gem Version](https://badge.fury.io/rb/base_presenter.png)](http://badge.fury.io/rb/base_presenter)
+[![Gem Version](https://badge.fury.io/rb/base_presenter.png)](http://badge.fury.io/rb/base_presenter) 
+[![Build Status](https://travis-ci.org/raglub/base_presenter.png?branch=master)](https://travis-ci.org/raglub/base_presenter)
 
 The gem adds "Presenter" functionality into Rails application.
 
