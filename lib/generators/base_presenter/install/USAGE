@@ -1,0 +1,3 @@
+Description:
+  The base_presenter:install ModelName generator creates an ApplicationPresenter class in the presenter
+  directory.

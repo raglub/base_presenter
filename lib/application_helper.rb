@@ -11,8 +11,10 @@ module ApplicationHelper
       presenter = klass.new(object_or_class, self)
     end
 
-    yield presenter if block_given?
-    #block.arity > 0 ? yield(presenter) : presenter.instance_eval(&block)
+    if block_given?
+      block.arity > 0 ? yield(presenter) : presenter.instance_eval(&block)
+    end
+
     return presenter
   end
 end

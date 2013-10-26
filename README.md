@@ -1,8 +1,10 @@
 # BasePresenter
 
+[![Gem Version](https://badge.fury.io/rb/base_presenter.png)](http://badge.fury.io/rb/base_presenter)
+
 The gem adds "Presenter" functionality into Rails application.
 
-## Installation
+# Installation
 
 Add this line to your application's Gemfile:
 
@@ -16,12 +18,21 @@ Or install it yourself as:
 
     $ gem install base_presenter
 
-## Usage
+# Getting Started
 
-In director root_rails/app/presenters create file example_presenter.rb with content
+## First step
+
+Usa a generator
+
+    rails g base_presenter:install [model_name]
+
+## Second step
+
+For model_name equal 'example' we should get file in director root_rails/app/presenters/example_presenter.rb which we can improve.
+For example:
 
 ```ruby
-class ExamplePresenter < BasePresenter
+class ExamplePresenter < ApplicationPresenter
   presents :example
   delegate :id, to: :example
 
@@ -60,6 +71,7 @@ and in file show.html.erb with:
   Class name: <%= presenter.class_name %>
 <% end %>
 ```
+
 ## Methods
 
 Methods of BasePresenter
@@ -68,4 +80,3 @@ Method returns span with 'None given' when value is blank
 ```erb
 #handle_none(value)
 ```
-

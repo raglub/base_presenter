@@ -6,10 +6,10 @@ require 'base_presenter/version'
 Gem::Specification.new do |spec|
   spec.name          = "base_presenter"
   spec.version       = BasePresenter::VERSION
-  spec.date          = '2013-10-15'
+  spec.date          = '2013-10-26'
   spec.authors       = ["Michał Szyma"]
   spec.email         = ["raglub.ruby@gmail.com"]
-  spec.description   = %q{The gem adds "Presenter" functionality into Rails application}
+  spec.description   = %q{The gem adds "Presenter" functionality into Rails application.}
   spec.summary       = %q{The gem adds "Presenter" functionality into Rails application}
   spec.homepage      = "https://github.com/raglub/base_presenter"
   spec.license       = "MIT"
