@@ -1,16 +1,4 @@
 require 'spec_helper'
-class DummyModelPresenter < BasePresenter
-  presents :dummy
-  delegate :id, to: :dummy
-
-  def name
-    dummy.name.upcase
-  end
-
-  def self.name
-    "Class name"
-  end
-end
 
 describe ApplicationHelper do
   let(:dummy_model) { DummyModel.new }
@@ -35,12 +23,12 @@ describe ApplicationHelper do
 
     it "#handle_none with not blank of value" do
       value = "no empty"
-      dummy_presenter.handle_none(value) {value}.should eq(value)
+      dummy_presenter.show_value(value).should eq(value)
     end
 
     it "#handle_none with not blank of value" do
       value = nil
-      dummy_presenter.handle_none(value) {value}.should match('<span class')
+      dummy_presenter.show_value(value).should match('<span class')
     end
   end
 end

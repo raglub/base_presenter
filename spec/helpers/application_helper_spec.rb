@@ -1,23 +1,4 @@
 require 'spec_helper'
-class DummyModelPresenter < BasePresenter
-  presents :dummy
-
-  def get_object
-    dummy
-  end
-
-  def get_template
-    @template
-  end
-
-  def self.get_object
-    @@object
-  end
-
-  def self.get_template
-    @@template
-  end
-end
 
 describe ApplicationHelper do
 
@@ -29,7 +10,23 @@ describe ApplicationHelper do
     end
 
     it "should initialize presenter with properly object model" do
-      helper.present(dummy_model).get_object.should eq dummy_model
+      present(dummy_model).get_object.should eq dummy_model
+    end
+
+    it "should valid presenter method using block without variable" do
+      result = ""
+      present(dummy_model) do
+        result += dummy_name
+      end
+      result.should eq "DUMMY"
+    end
+
+    it "should valid presenter method using block with variable" do
+      result = ""
+      present(dummy_model) do |dummy_presenter|
+        result += dummy_presenter.dummy_name
+      end
+      result.should eq "DUMMY"
     end
   end
 
@@ -39,7 +36,16 @@ describe ApplicationHelper do
     end
 
     it "should initialize presenter with properly object model" do
-      helper.present(DummyModel).get_object.should eq DummyModel
+      present(DummyModel).get_object.should eq DummyModel
     end
+
+    it "should valid presenter method using block" do
+      expect do
+        helper.present(DummyModel) do |dummy_presenter|
+
+        end
+      end.to_not raise_error
+    end
+
   end
 end

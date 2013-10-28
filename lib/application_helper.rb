@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def present(object_or_class, klass = nil)
+  def present(object_or_class, klass = nil, &block)
     presenter = nil
 
     if object_or_class.methods.include?(:new)
