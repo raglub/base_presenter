@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/raglub/base_presenter.png?branch=master)](https://travis-ci.org/raglub/base_presenter)
 [![Code Climate](https://codeclimate.com/github/raglub/base_presenter.png)](https://codeclimate.com/github/raglub/base_presenter)
 [![Dependency Status](https://gemnasium.com/raglub/base_presenter.png)](https://gemnasium.com/raglub/base_presenter)
+[![Coverage Status](https://coveralls.io/repos/raglub/base_presenter/badge.png)](https://coveralls.io/r/raglub/base_presenter)
 
 The gem adds "Presenter" functionality into Rails application.
 
@@ -82,3 +83,9 @@ Method returns span with 'None given' when value is blank
 ```erb
 #handle_none(value)
 ```
+
+# License
+
+SmartCSV uses the MIT license. Please check the [LICENSE][] file for more details.
+
+[license]: https://github.com/raglub/base_presenter/blob/master/LICENSE

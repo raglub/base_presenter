@@ -6,7 +6,8 @@ require 'base_presenter/version'
 Gem::Specification.new do |spec|
   spec.name          = "base_presenter"
   spec.version       = BasePresenter::VERSION
-  spec.date          = '2013-10-28'
+  spec.platform      = Gem::Platform::RUBY
+  spec.date          = '2013-10-31'
   spec.authors       = ["Michał Szyma"]
   spec.email         = ["raglub.ruby@gmail.com"]
   spec.description   = %q{The gem adds "Presenter" functionality into Rails application.}
@@ -23,6 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec-rails'
   spec.add_development_dependency 'rails', '>= 3.0.0'
-  spec.add_development_dependency 'simplecov'
 
 end
