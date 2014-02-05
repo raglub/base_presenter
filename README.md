@@ -1,5 +1,5 @@
 # BasePresenter
-[![Gem Version](https://badge.fury.io/rb/base_presenter.png)](http://badge.fury.io/rb/base_presenter) 
+[![Gem Version](https://badge.fury.io/rb/base_presenter.png)](http://badge.fury.io/rb/base_presenter)
 [![Build Status](https://travis-ci.org/raglub/base_presenter.png?branch=master)](https://travis-ci.org/raglub/base_presenter)
 [![Code Climate](https://codeclimate.com/github/raglub/base_presenter.png)](https://codeclimate.com/github/raglub/base_presenter)
 [![Dependency Status](https://gemnasium.com/raglub/base_presenter.png)](https://gemnasium.com/raglub/base_presenter)
@@ -86,6 +86,6 @@ Method returns span with 'None given' when value is blank
 
 # License
 
-SmartCSV uses the MIT license. Please check the [LICENSE][] file for more details.
+BasePresenter uses the MIT license. Please check the [LICENSE][] file for more details.
 
 [license]: https://github.com/raglub/base_presenter/blob/master/LICENSE
