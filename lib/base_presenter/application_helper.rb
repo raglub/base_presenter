@@ -1,4 +1,4 @@
-module ApplicationHelper
+module BasePresenter::ApplicationHelper
   def present(object_or_class, klass = nil, &block)
     presenter = nil
 

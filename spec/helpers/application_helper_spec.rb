@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe ApplicationHelper do
-
   let(:dummy_model) { DummyModel.new }
 
   describe "for DummyModel object" do

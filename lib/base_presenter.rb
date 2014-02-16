@@ -1,5 +1,5 @@
 require "base_presenter/version"
-require "application_helper"
+require "base_presenter/application_helper"
 
 class BasePresenter
 

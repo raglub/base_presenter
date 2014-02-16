@@ -31,6 +31,16 @@ Usa a generator
 
 ## Second step
 
+Add line
+
+```ruby
+  include BasePresenter::ApplicationHelper
+```
+
+to ApplicationHelper module in Rails application.
+
+## Third step
+
 For model_name equal 'example' we should get file in director root_rails/app/presenters/example_presenter.rb which we can improve.
 For example:
 
